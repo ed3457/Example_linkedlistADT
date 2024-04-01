@@ -22,6 +22,10 @@ public:
 	void insertAtStart(int data);
 	void printList();
 	bool search(int data);
+	int getInfoAtFirst();
+	int getInfoAtLast();
+
+	void reset();
 
 
 

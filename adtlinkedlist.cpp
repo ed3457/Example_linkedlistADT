@@ -70,3 +70,42 @@ bool adtlinkedlist::search(int data)
 
 	return false;
 }
+
+int adtlinkedlist::getInfoAtFirst()
+{
+	if (isEmpty())
+		throw 1;
+	return first->info;
+}
+
+int adtlinkedlist::getInfoAtLast()
+{
+	if (isEmpty())
+		throw 2;
+	node* current = first;
+
+	// 2. use while loop to scan the list
+	while (current->link != NULL)
+	{
+		current = current->link;
+
+	}
+
+	return current->info;
+}
+
+void adtlinkedlist::reset()
+{
+	node* current1 = first;
+	node* current2 = first;
+	while (count != 0)
+	{
+		current2 = current1;
+		current1 = current1->link;
+
+		delete current2; 
+		count--;
+	}
+
+	first = NULL; 
+}
