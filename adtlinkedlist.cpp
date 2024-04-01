@@ -32,3 +32,41 @@ void adtlinkedlist::insertAtStart(int data)
 	count++;
 
 }
+
+void adtlinkedlist::printList()
+{
+	// 1. define a node that will be used to scan the list, we can call it current
+
+	node* current = first; 
+
+	// 2. use while loop to scan the list
+	while (current !=NULL)
+	{
+		// 3. print the info in the current node
+		cout << current->info << endl;
+
+		current = current->link;
+
+	}
+
+}
+
+bool adtlinkedlist::search(int data)
+{
+	// 1. define a node that will be used to scan the list, we can call it current
+
+	node* current = first;
+
+	// 2. use while loop to scan the list
+	while (current != NULL)
+	{
+		// 3. find if the data matches the info 
+		if (current->info == data)
+			return true;
+
+		current = current->link;
+
+	}
+
+	return false;
+}

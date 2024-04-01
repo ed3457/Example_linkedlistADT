@@ -10,15 +10,17 @@ int main()
 
     adtlinkedlist list1;
 
-    cout << list1.isEmpty() << endl;
-    cout << list1.getLength() << endl;
+    //cout << list1.isEmpty() << endl;
+    //cout << list1.getLength() << endl;
 
     list1.insertAtStart(1);
     list1.insertAtStart(2);
     list1.insertAtStart(3);
 
-    cout << list1.isEmpty() << endl;
-    cout << list1.getLength() << endl;
+    //cout << list1.isEmpty() << endl;
+    //cout << list1.getLength() << endl;
+
+    list1.printList();
     
 }
 

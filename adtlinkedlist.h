@@ -20,6 +20,8 @@ public:
 	bool isEmpty();
 	int getLength();
 	void insertAtStart(int data);
+	void printList();
+	bool search(int data);
 
 
 
