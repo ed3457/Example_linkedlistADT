@@ -34,9 +34,15 @@ void adtlinkedlist::insertAtStart(int data)
 }
 
 void adtlinkedlist::insertAtIndex(int data, int index)
-{
-	// validation : index should be less than or equal to count-1 , no negative indexes 
-	if (index < 0 || index > count - 1)
+{    // handle the case when the list is empty
+	if (count == 0)
+	{
+		insertAtStart(data);
+		return; 
+	}
+
+	// validation : index should be less than or equal to count , no negative indexes 
+	if (index < 0 || index > count)
 		throw 3; 
 	// 1. create a new node
 	node* newNode = new node();
@@ -121,6 +127,25 @@ int adtlinkedlist::getInfoAtLast()
 	return current->info;
 }
 
+void adtlinkedlist::deleteAtStart()
+{  // validation 
+	if (count == 0)
+	{
+		throw 1;
+	}
+
+	// 1. point to the first node 
+	node* current = first;
+
+	// 2. change the first pointer to the next node
+	first = first->link;
+
+	//3. delete the first node
+	delete current;
+	//4. change the count 
+	count--;
+}
+
 void adtlinkedlist::reset()
 {
 	node* current1 = first;
@@ -135,4 +160,8 @@ void adtlinkedlist::reset()
 	}
 
 	first = NULL; 
+
+	// or 
+	//while (!list1.isEmpty())
+	//list1.deleteAtStart();
 }

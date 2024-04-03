@@ -25,6 +25,7 @@ public:
 	bool search(int data);
 	int getInfoAtFirst();
 	int getInfoAtLast();
+	void deleteAtStart();
 
 	void reset();
 

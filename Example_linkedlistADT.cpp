@@ -27,7 +27,12 @@ int main()
 
         //cout << list1.getInfoAtLast();
 
-        list1.reset();
+        //list1.reset();
+
+       // list1.insertAtIndex(100, 3);
+        while(! list1.isEmpty())
+        list1.deleteAtStart();
+
         list1.printList();
 
     }
@@ -38,6 +43,10 @@ int main()
         {
         case 1:case 2:
             cout << "The list is empty!\n";
+            break;
+
+        case 3: 
+            cout << "Invalid index\n";
             break;
        
         }
