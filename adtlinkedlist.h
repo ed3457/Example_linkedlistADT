@@ -26,6 +26,9 @@ public:
 	int getInfoAtFirst();
 	int getInfoAtLast();
 	void deleteAtStart();
+	
+	//void deleteLastNode();
+	// void reverseList(); 
 
 	void reset();
 
