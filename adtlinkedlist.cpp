@@ -33,6 +33,33 @@ void adtlinkedlist::insertAtStart(int data)
 
 }
 
+void adtlinkedlist::insertAtIndex(int data, int index)
+{
+	// validation : index should be less than or equal to count-1 , no negative indexes 
+	if (index < 0 || index > count - 1)
+		throw 3; 
+	// 1. create a new node
+	node* newNode = new node();
+	newNode->info = data;
+    // 2. Loop until you find the proper index 
+	int currentIndex = 0;
+	node* current = first;
+
+	while (currentIndex != index-1)
+	{
+		currentIndex++;
+		current = current->link;
+	}
+
+	// 3. Change the pointers 
+	newNode->link = current->link;
+	current->link = newNode;
+
+	//4. increment the count 
+	count++;
+	
+}
+
 void adtlinkedlist::printList()
 {
 	// 1. define a node that will be used to scan the list, we can call it current
