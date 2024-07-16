@@ -146,6 +146,45 @@ void adtlinkedlist::deleteAtStart()
 	count--;
 }
 
+int adtlinkedlist::getMax()
+{
+	// 1. define a node that will be used to scan the list, we can call it current
+
+	node* current = first;
+	int max;
+	if (first != NULL)
+		max = first->info;
+	else
+		throw 10;
+	// 2. use while loop to scan the list
+	while (current != NULL)
+	{
+		// 3. print the info in the current node
+		if (current->info > max)
+			max = current->info;
+
+		current = current->link;
+
+	}
+	return max;
+}
+
+int adtlinkedlist::countEvenNumbers()
+{
+	node* current = first;
+	int count = 0;
+	
+	while (current != NULL)
+	{
+		if (current->info % 2 == 0)
+			count++;
+
+		current = current->link;
+
+	}
+	return count; 
+}
+
 void adtlinkedlist::reset()
 {
 	node* current1 = first;
@@ -165,3 +204,5 @@ void adtlinkedlist::reset()
 	//while (!list1.isEmpty())
 	//list1.deleteAtStart();
 }
+
+
