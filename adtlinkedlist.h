@@ -27,6 +27,7 @@ public:
 	int getInfoAtLast();// return the last node 
 	void deleteAtStart();// delete the first node 
 	int getMax();// returns the max number in the list
+	int getAvgMaxMin();// returns the max number in the list
 	//void deleteLastNode();
 	// void reverseList(); 
 	int countEvenNumbers();// this will return the number of even numbers in the list 

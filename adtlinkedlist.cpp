@@ -35,7 +35,7 @@ void adtlinkedlist::insertAtStart(int data)
 
 void adtlinkedlist::insertAtIndex(int data, int index)
 {    // handle the case when the list is empty
-	if (count == 0)
+	if (index == 0)
 	{
 		insertAtStart(data);
 		return; 
@@ -167,6 +167,36 @@ int adtlinkedlist::getMax()
 
 	}
 	return max;
+}
+
+int adtlinkedlist::getAvgMaxMin()
+{
+	// 1. define a node that will be used to scan the list, we can call it current
+
+	node* current = first;
+	int max;
+	int min;
+	if (first != NULL)
+	{
+		max = first->info;
+		min = first->info;
+	}
+	else
+		throw 10;
+	// 2. use while loop to scan the list
+	while (current != NULL)
+	{
+		// 3. print the info in the current node
+		if (current->info > max)
+			max = current->info;
+
+		if (current->info < min)
+			min = current->info;
+
+		current = current->link;
+
+	}
+	return (max+min);
 }
 
 int adtlinkedlist::countEvenNumbers()
