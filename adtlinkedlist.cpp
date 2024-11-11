@@ -67,7 +67,15 @@ void adtlinkedlist::insertAtIndex(int data, int index)
 }
 
 void adtlinkedlist::printList()
-{
+{   
+	// validation:
+	
+	if (first == NULL)
+	{
+		cout << "List is empty!\n";
+		return; 
+
+	}
 	// 1. define a node that will be used to scan the list, we can call it current
 
 	node* current = first; 
@@ -85,7 +93,10 @@ void adtlinkedlist::printList()
 }
 
 bool adtlinkedlist::search(int data)
-{
+{   //validation:
+
+	if (first == NULL)
+		return false;
 	// 1. define a node that will be used to scan the list, we can call it current
 
 	node* current = first;
@@ -147,7 +158,9 @@ void adtlinkedlist::deleteAtStart()
 }
 
 int adtlinkedlist::getMax()
-{
+{    // validation, list has no elements
+	throw 1; // raise an exception 
+      
 	// 1. define a node that will be used to scan the list, we can call it current
 
 	node* current = first;
@@ -203,6 +216,7 @@ int adtlinkedlist::countEvenNumbers()
 {
 	node* current = first;
 	int count = 0;
+
 	
 	while (current != NULL)
 	{

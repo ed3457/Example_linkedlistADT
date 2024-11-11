@@ -12,7 +12,7 @@ class adtlinkedlist
 {
 private: 
 
-	node* first; // pointer to the first node 
+	node* first; // pointer to the first node, example on composition 
 	int count; // how many nodes we have 
 public:
 
@@ -27,12 +27,14 @@ public:
 	int getInfoAtLast();// return the last node 
 	void deleteAtStart();// delete the first node 
 	int getMax();// returns the max number in the list
-	int getAvgMaxMin();// returns the max number in the list
+	int getAvgMaxMin();// returns the average of min/max in the list
 	//void deleteLastNode();
 	// void reverseList(); 
 	int countEvenNumbers();// this will return the number of even numbers in the list 
-
+	//void deleteAtIndex(int index);
 	void reset();// deletes all the nodes
+	//void deleteMiddle();
+
 
 
 
