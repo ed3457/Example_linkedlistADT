@@ -28,7 +28,8 @@ public:
 	void deleteAtStart();// delete the first node 
 	int getMax();// returns the max number in the list
 	int getAvgMaxMin();// returns the average of min/max in the list
-	//void deleteLastNode();
+	//void deleteLast();
+	//void replace();
 	// void reverseList(); 
 	int countEvenNumbers();// this will return the number of even numbers in the list 
 	//void deleteAtIndex(int index);
